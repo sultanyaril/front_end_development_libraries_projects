@@ -19,7 +19,8 @@ code {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  flex-direction: column;
 }
 
 #quote-box {
@@ -28,6 +29,7 @@ code {
   background-color: white;
   padding: 20pt;
   border-radius: 3pt;
+  text-align: center;
 }
 
 #text {
@@ -59,5 +61,6 @@ code {
 
 #signature {
   color: white;
+  margin: 10pt;
 }
 
