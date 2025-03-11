@@ -1,0 +1,9 @@
+.Previewer {
+    border: solid black 1px;
+    background-color: #c0d8d8;
+}
+
+.processedMarkdown {
+    padding: 10px 20px 10px 20px;
+    background-color: #c0d8d8;
+}
