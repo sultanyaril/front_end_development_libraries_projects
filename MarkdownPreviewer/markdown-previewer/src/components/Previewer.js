@@ -2,6 +2,10 @@ import styles from './Previewer.module.css'
 import { useSelector } from 'react-redux';
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
+marked.use({
+    breaks: true
+});
+
 const Previewer = () => {
     const rawMarkdown = useSelector((state) => state.markdown.value);
 

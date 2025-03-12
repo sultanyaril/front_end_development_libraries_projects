@@ -10,7 +10,8 @@ const Editor = () => {
     return (
         <div className={ styles.Editor }>
             <textarea onChange={ (e) => dispatch(change(e.target.value)) }
-                      value={ rawMarkdown } >
+                      value={ rawMarkdown }
+                      id="editor">
                 { rawMarkdown }
             </textarea>
         </div>
