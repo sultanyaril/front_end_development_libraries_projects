@@ -1,0 +1,58 @@
+.Board {
+    height: 300px;
+    width: 600px;
+    border: 4px solid orange;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-color: darkgrey;
+}
+
+.buttons {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    padding: 4px;
+}
+
+.instruments {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.instrumentContainer {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.instrumentTitle {
+    font-size: 1.2rem;
+}
+
+.volumeSlider {
+    width: 200px;
+}
+
+.lastActionText {
+    background-color: gray;
+    width: 200px;
+    height: 35px;
+    text-align: center;
+    padding: 5px;
+}
