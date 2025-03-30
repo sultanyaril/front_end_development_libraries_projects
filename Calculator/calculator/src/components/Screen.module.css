@@ -1,0 +1,14 @@
+.Screen {
+    text-align: right;
+    min-width: 305px;
+    min-height: 60px;
+    font-size: 25px;
+}
+
+.current_calculation {
+    min-height: 30px;
+}
+
+.last_action {
+    min-height: 30px;
+}
