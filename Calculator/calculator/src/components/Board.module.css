@@ -1,0 +1,27 @@
+.Board {
+    width: 305px;
+    height: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+}
+
+Button {
+    width: 75px;
+    height: 75px;
+}
+
+.deleteButton {
+    width: 151px;
+}
+
+.equalButton {
+    width: 75px;
+    height: 151px;
+    position: relative;
+    bottom: 76px;
+}
+
+.zeroButton {
+    width: 151px;
+}

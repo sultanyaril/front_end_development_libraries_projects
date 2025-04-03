@@ -14,13 +14,23 @@ const stateSlice = createSlice({
             if ( state.finished ) {
                 state.finished = false;
                 console.log(action);
-                if (action in ['+', '-', '*', '/', '.']) {
-                    state.string = state.string.split('=')[-1] + action;
+                if (['+', '-', 'x', '/', '.'].includes(action.payload)) {
+                    const split_string = state.string.split('=')
+                    state.string = split_string[split_string.length-1] + action.payload;
                 } else {
                     state.string = action.payload;
                 }
             } else {
-                state.string += action.payload;
+                if (state.string === '0' && action.payload==='0') {
+                    return
+                } else if (state.string === '0') {
+                    state.string = action.payload;
+                } else if (['+', '-', 'x', '/', '.'].includes(action.payload)
+                    && ['+', '-', 'x', '/', '.'].includes(state.string[state.string.length-1])) {
+                     state.string = state.string.substring(0, state.string.length-1) + action.payload;
+                } else {
+                    state.string += action.payload;
+                }
             }
             state.lastAction = action.payload;
         },
@@ -28,10 +38,16 @@ const stateSlice = createSlice({
             if (state.finished) {
                 return;
             }
-            const result = evaluate(state.string.replace("x", "*"))
-            state.string = state.string + "=" + result;
-            state.lastAction = result;
-            state.finished = true;
+            try {
+                let result = evaluate(state.string.replace("x", "*"))
+                const factor = Math.pow(10, Math.min(12, (result.toString().split('.')[1] || '').length));
+                result = Math.ceil(result * factor) / factor;
+                state.string = state.string + "=" + result;
+                state.lastAction = result;
+                state.finished = true;
+            } finally {
+                return;
+            }
         },
         reset: (state) => {
             state.string = "";

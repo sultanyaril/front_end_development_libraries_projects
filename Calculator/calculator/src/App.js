@@ -1,24 +1,18 @@
 import styles from "./App.module.css";
-import NumberPanel from "./components/NumberPanel";
-import EqualButton from "./components/EqualButton";
 import Screen from "./components/Screen";
-import OperationButton from "./components/OperationButton";
-import DeleteButton from "./components/DeleteButton";
-
+import Board from "./components/Board";
+import Signature from "./components/Signature";
 
 function App() {
+
+
     return (
-    <div className={ styles.App }>
-      <Screen />
-      <DeleteButton />
-      <OperationButton operation={"/"} />
-      <OperationButton operation={"x"} />
-      <NumberPanel />
-      <OperationButton operation={"-"} />
-      <OperationButton operation={"+"} />
-      <EqualButton />
-    </div>
-  );
+        <div className={ styles.App }>
+            <Screen />
+            <Board />
+            <Signature />
+        </div>
+    );
 }
 
 export default App;

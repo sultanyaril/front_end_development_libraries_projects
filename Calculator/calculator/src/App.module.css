@@ -1,6 +1,10 @@
 .App {
     text-align: center;
-    display: inline-block;
-    width: 305px;
-    border: 1px solid white;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+    padding: 10px;
+    border: 2px solid darkcyan;
+    background-color: black;
 }
