@@ -1,0 +1,10 @@
+.App {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 330px;
+    padding: 10px;
+    border: 2px solid darkcyan;
+    background-color: black;
+}
